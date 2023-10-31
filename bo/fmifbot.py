@@ -1,5 +1,6 @@
 import telebot
-bot = telebot.TeleBot("6393124287:AAE9CleODokf1hMgGCqmd9TQI0dWCco_YoE")
+
+bot = telebot.TeleBot("bot-token")
 
 btn1= telebot.types.InlineKeyboardButton("youtube" , url="https://www.youtube.com/@fmif_/videos")
 mark1= telebot.types.InlineKeyboardMarkup()
@@ -63,7 +64,5 @@ def btn11(message):
         msg2 = bot.send_message(message.chat.id , "خوش امدید لطفا نام و نام خانوادگی خود رو وارد کنید ")
         bot.register_next_step_handler(msg2,age)
     bot.register_next_step_handler(msg,btn11)
-
-
 
 bot.infinity_polling()
